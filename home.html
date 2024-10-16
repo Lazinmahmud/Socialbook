@@ -1,0 +1,2184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="home.css">
+  <title>home</title>
+</head>
+<body >
+  
+  
+  <nav>
+    <div class="nav-left">
+      <div class="nav-img ">
+      <img src="logo-circle.png ">
+    </div>
+    <div onclick="toggleSearch()" class="search-icon-box">
+        <i class='bx bx-search'></i>
+      </div>
+    </div>
+    <div class="nav-middle ">
+      <div class="nav-icon-box">
+        <div id="homeNav" class="nav-icon ">
+        <img  id="homeGray" src="home.png">
+        <img id="homeBlue" src="home-blue.png">
+      </div>
+      <div id="profileNav" class="nav-icon ">
+        <img  id="profileGray" src="profile.png">
+        <img  id="profileBlue" src="profile-blue.png">
+      </div>
+      <div id="notificationNav" class="nav-icon ">
+        <img  id="notiGray" src="video.png">
+        <img  id="notiBlue" src="video-blue.png">
+      </div>
+      </div>
+      <div class="underline"></div>
+    </div>
+    
+    <div class="nav-right">
+      <div class="notification-box">
+        <img id="notiLight" src="noti-dark.png">
+        
+      </div>
+      <div class="profile-circle " onclick="toggleDropdown()">
+      <img src="no-profile.png" class="profile-img">
+    </div>
+    </div>
+    
+    
+  </nav>
+  
+  <div class="mobail-nav">
+    <div class="nav-top">
+      <div class="navLogo">
+        <img src="logo-blue.png">
+      </div>
+      <div class="search-and-udow-box">
+        <img src="search.png" class="searchImg">
+        <a href="#">
+          <img src="settings.png" class="settingImg">
+        </a>
+      </div>
+    </div>
+    <div class="nav-bottom">
+      
+      <div class="navMDisplayFlex">
+        <a href="#" >
+      <div id="homNavM" class="nav-mobail">
+        <img id="homeBlueM" src="home-blue.png">
+        <img id="homeGrayM" src="home.png">
+        <div class="newFeedNotification">+</div>
+      </div>
+      </a>
+      <a href="#">
+      <div id="profileNavM" class="nav-mobail">
+        <img  id="profileGrayM" src="friends.png">
+        <img id="profileBlueM" src="friends-blue.png">
+      </div>
+      </a>
+      <a href="#">
+      <div id="udowNavM" class="nav-mobail">
+        <img  id="chatGrayM" src="chat-icon.png">
+        <img id="chatBlueM" src="chat-blue.png">
+      </div>
+      </a>
+      <a href="#">
+      <div id="notiNavM" class="nav-mobail">
+        <img  id="notiGrayM" src="notification.png">
+        <img  id="notiBlueM" src="video-blue.png">
+      </div>
+      </a>
+      <a href="#">
+      <div id="menuNavM" class="nav-mobail">
+        <div class="nav-menu">
+          <img src="no-profile.png" class="profile-img">
+        </div>
+      </div>
+      </a>
+      </div>
+      
+       <div class="mUnderline"></div>
+    </div>
+  </div>
+  
+  
+  <div class="drop-down-menu " id="dropdownMenu">
+    <div class="mainMenuPage">
+    <div class="user-profile-and-name ">
+      <div class="menu-profile ">
+        <img src="no-profile.png" class="profile-img ">
+      </div>
+      <h4 class="greet"></h4>
+    </div>
+    <div class="menu-item ">
+      <img src="setting.png ">
+      <h4>Settings & privacy</h4>
+      <img id="menu-arrowPng" src="arrow.png ">
+    </div>
+    <div class="menu-item ">
+      <img src="help.png ">
+      <h4>Help & support</h4>
+      <img id="menu-arrowPng" src="arrow.png ">
+    </div>
+    <div class="menu-item darkModePage ">
+      <img src="display.png ">
+      <h4>Display settings</h4>
+      <img id="menu-arrowPng" src="arrow.png ">
+    </div>
+    <div class="menu-item ">
+      <img src="feedback.png ">
+      <h4>Give feedback</h4>
+    </div>
+    <div class="menu-item logout-btn">
+      <img src="logout.png ">
+      <h4>Log Out</h4>
+    </div>
+    </div>
+    
+    <div class="menuDisplayAccessbalityBox">
+  <div class="displayPageHeader">
+    <i class='bx bx-arrow-back menuBack'></i>
+    <h4>Dark Mode</h4>
+  </div>
+
+  <div class="radio-options">
+    <label>
+      Off
+      <input type="radio" name="dark-mode" value="off" checked>
+      
+    </label>
+    <label>
+      On
+      <input type="radio" name="dark-mode" value="on">
+    </label>
+    <label>
+      Dim
+      <input type="radio" name="dark-mode" value="dim">
+    </label>
+    <label>
+      <div>
+      Automatic
+      <p>We'll automatically adjust the display based on your device's system settings.</p>
+      </div>
+      <input type="radio" name="dark-mode" value="auto">
+      
+    </label>
+  </div>
+</div>
+    
+    
+  </div>
+  
+     <div id="dropDownSearch" class="dropdown-search-box">
+  <div class="search-inp">
+    <input id="searchInp" type="search" placeholder="Search Socialbook">
+  </div>
+  <h4 class="recentTxt">Recent</h4>
+  <div class="search-content-box hidden" id="searchContentBox"></div>
+</div>
+
+
+
+
+  <div class="main-container">
+    <div class="left-sidebar">
+      
+      <div class="sidebar-profile">
+        <img src="no-profile.png" class="profile-img">
+        <h4 class="greet"></h4>
+      </div>
+      <div class="sidebar-items">
+        <img src="feeds.png">
+        <h4>For You</h4>
+      </div>
+      <div class="sidebar-items">
+        <img src="friends-blue.png">
+        <h4>Friends</h4>
+      </div>
+      <div class="sidebar-items">
+        <img src="events.png">
+        <h4>Events</h4>
+      </div>
+      <div class="sidebar-items">
+        <img src="groups.png">
+        <h4>Groups</h4>
+      </div>
+      
+      
+      
+      
+    </div>
+   <div class="main-content">
+     <div class="post-create-container ">
+       <div class="post-create-display-flex">
+         <div class="post-create-profile-box">
+         <div class="post-create-profile">
+           <img src="no-profile.png" class="profile-img ">
+           <div class="online-status"></div>
+         </div>
+       </div>
+     <div class="textarea ">
+         <p id="postTextarea">What do you think?</p>
+       </div>
+       </div>
+       <hr>
+       <div class="post-create-activity-box">
+         <div class="post-create-activity-btn">
+           <img class="vdoRelsPng" src="reels.png">
+           <h4>Videos</h4>
+         </div>
+         <div class="post-create-activity-btn">
+           <img src="img-icon.png">
+           <h4>Photos</h4>
+         </div>
+         <div class="post-create-activity-btn">
+           <img src="feelings.png">
+           <h4>Feelings</h4>
+         </div>
+       </div>
+    </div>
+    
+    
+    <div class="main-story-container">
+      <div class="create-story">
+        <img class="profile-img">
+        <div class="create-st-box">
+          <div class="create-btn">
+            <img src="plus.png">
+          </div>
+          <h4>Add new</h4>
+        </div>
+      </div>
+      <div class="user-story">
+        <div class="story-count-number">1</div>
+      </div>
+      <div class="user-story">
+        <div class="story-count-number">1</div>
+      </div>
+      <div class="user-story">
+        <div class="story-count-number">1</div>
+      </div>
+      <div class="user-story">
+        <div class="story-count-number">1</div>
+      </div>
+      <div class="user-story">
+        <div class="story-count-number">1</div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!---<div class="post-upload-pogress-container">
+      <img src="post.jpg">
+      <p>Posting...</p>
+      <span class="imgUpProgress"></span>
+    </div>--->
+    
+    <audio id="postSound" src="post-sound.mp3" preload="auto"></audio>
+    
+<!-----<div class="post ">
+      <div class="post-header_and_post_content">
+        <div class="profile-box ">
+          <div class="post-profile">
+         <img src="post.jpg ">
+       </div>
+     </div>
+     <div class="post-userName-andtime">
+       <h4>Lazim Mahmud</h4>
+       
+     </div>
+     <div class="post-menu">
+       <i class='bx bx-dots-vertical-rounded'></i>
+     </div>
+           </div>
+         <div class="post-text ">
+       <p>hello world welcome to socialbook and this is a social media platform in the world</p>
+   </div>
+ <div class="post-img ">
+  <img src="profile.jpg" id="databaseImg">
+    </div>
+    <div class="activity-content-box">
+      <div class="like-content" >
+        <img class="like-round-icon" src="like-round.png">
+      <h4>1</h4>
+      </div>
+        <div class="comment-content">
+          <h4>0 Comment</h4>
+        </div>
+        <span class="dots">•</span>
+        <div class="share-content">
+          <h4>0 Share</h4>
+        </div>
+    </div>
+    
+    
+    <div class="reaction-container" style="visibility: hidden; opacity: 0; transform: scale(0.8); transition: opacity 0.3s, transform 0.3s;">
+      <img src="like-round.png">
+      <img src="love.png">
+      <img src="haha.png">
+      <img src="wow.png">
+      <img src="sad.png">
+      <img src="angry.png">
+    </div>
+    
+    
+    
+    
+      <div class="post-activity-container">
+       <div class="post-activity-box ">
+         <div id="likeBox" class="like-box ">
+            <img id="likeGray" src="like.png">
+              <img id="likeBlue" src="like-blue.png">
+             <h4 id="likeText">Like</h4>
+           </div>
+         <div class="like-box ">
+       <img src="comment.png">
+     <h4>Comment</h4>
+   </div>
+     <div class="like-box ">
+      <img src="share.png">
+        <h4>Share</h4>
+          </div>
+             </div>
+               </div>
+          <div class="coment-display-container">
+            
+         
+           <div class="user-coment-box">
+              <div class="user-comment-profile">
+                <img class="profile-img">
+              </div>
+              <div class="coment-content">
+                <h4></h4>
+                <p></p>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+         <div class="post-comment-container">
+           <div class="comment-profile">
+             <img class="profile-img">
+           </div>
+           <div class="comment-inp-box">
+             <input type="text" placeholder="Write a public comment...">
+           </div>
+           <button class="comment-send-button" type="button"><i class='bx bxs-send' ></i></button>
+         </div>
+               
+      </div>---->
+      
+<!----<div class="post ">
+      <div class="post-header_and_post_content">
+              <div class="profile-box ">
+                <div class="post-profile">
+                   <img src="no-profile.png">
+                </div>
+              </div>
+              <div class="post-userName-andtime">
+                <h4>Lazim Mahmud <span class="update-profile-text">Update his profile picture.</span></h4>
+                <p class="span" id="post-time-${postId}">1m ago <span>•</span><span> <i class='bx bx-world'></i></span></p>
+              </div>
+              <div class="post-menu">
+                <i class='bx bx-dots-vertical-rounded'></i>
+              </div>
+            </div>
+       <div class="profile-post-img ">
+          <div class="profileImgCircle">
+           <img src="profile.jpg" id="databaseImg">
+        </div>
+      </div>
+      <div class="post-activity-container">
+       <div class="post-activity-box ">
+         <div onclick="toggleLike()" class="like-box ">
+            <img id="likeGray" src="like.png">
+              <img id="likeBlue" src="like-blue.png">
+             <h4 id="likeText">Like</h4>
+           </div>
+         <div class="like-box ">
+       <img src="comment.png">
+     <h4>Comment</h4>
+   </div>
+     <div class="like-box ">
+      <img src="share.png">
+        <h4>Share</h4>
+          </div>
+             </div>
+               </div>
+               
+      </div>----->
+      
+              
+        
+    <div class="loading-post-container">
+    <div class="loading-post">
+       <div class="loading-profile-header">
+         <div class="loading-profile"></div>
+         <div class="bar-container">
+           <div class="loading-bar"></div>
+         <div style="margin-top: 9px; width: 35%;" class="loading-bar"></div>
+         </div>
+       </div>
+     <div class="loading-bottom-bar">
+           <div class="bar"></div>
+           <div class="bar"></div>
+           <div class="bar"></div>
+         </div>
+   </div>
+   <div class="loading-post">
+       <div class="loading-profile-header">
+         <div class="loading-profile"></div>
+         <div class="bar-container">
+           <div class="loading-bar"></div>
+         <div style="margin-top: 9px; width: 35%;" class="loading-bar"></div>
+         </div>
+       </div>
+     <div class="loading-bottom-bar">
+           <div class="bar"></div>
+           <div class="bar"></div>
+           <div class="bar"></div>
+         </div>
+   </div>
+    
+    
+  </div>
+     
+              
+   </div>
+    
+    <div class="right-sidebar">
+      
+      <div class="sidebar_sponsored">
+        <h4>Socialbook Sponsored</h4>
+      </div>
+      
+      <div class="sponsored-box">
+        <img src="sponsored.gif">
+      </div>
+      
+      <hr class="hr">
+      
+      <div class="sidebarEvent">
+        <h4>Events</h4>
+      </div>
+      <div class="event-box">
+        <div class="event-calender">
+          <div class="calender-top">
+            <h4 class="date">15</h4>
+          </div>
+          <div class="calender-bottom">
+            <h4 class="eventMonth">may</h4>
+          </div>
+        </div>
+        <div class="event-details">
+          <h4>Event Name</h4>
+          <p class="eventLocation"><i class='bx bxs-map'></i> Bangladesh</p>
+          <p class="see_more_event_btn">See more</p>
+        </div>
+      </div>
+      
+      
+      <hr class="hr">
+      
+      <div class="sidebar_friend_req">
+        <h4>Friend requests</h4>
+      </div>
+      <div class="new-request-container">
+     <div class="request-profile">
+       <img src="profile.jpg">
+     </div>
+     <div class="request-details-box">
+       <h4>Lazim Mahmud</h4>
+       <p>Sent you a friend request</p>
+       <div class="reqst-actvty-btn">
+         <button type="button" class="rq-confirm">Accept</button>
+         <button type="button" class="dlt-rq-btn">Delete</button>
+       </div>
+     </div>
+   </div>
+      
+      <hr class="hr">
+      
+      <div class="sidebar-friend-list">
+        <h4>Friends</h4>
+      </div>
+      <div class="friends">
+        <div class="friendProfileImg">
+          <img src="profile.jpg">
+          <div class="online-friend"></div>
+        </div>
+        <h4>Laxim Mahmud</h4>
+      </div>
+      <div class="friends">
+        <div class="friendProfileImg">
+          <img src="profile.jpg">
+          <div class="online-friend"></div>
+        </div>
+        <h4>Laxim Mahmud</h4>
+      </div>
+      <div class="friends">
+        <div class="friendProfileImg">
+          <img src="profile.jpg">
+          <div class="online-friend"></div>
+        </div>
+        <h4>Laxim Mahmud</h4>
+      </div>
+      <div class="friends">
+        <div class="friendProfileImg">
+          <img src="profile.jpg">
+          <div class="online-friend"></div>
+        </div>
+        <h4>Laxim Mahmud</h4>
+      </div>
+      <div class="friends">
+        <div class="friendProfileImg">
+          <img src="profile.jpg">
+          <div class="online-friend"></div>
+        </div>
+        <h4>Laxim Mahmud</h4>
+      </div>
+      <div class="friends">
+        <div class="friendProfileImg">
+          <img src="profile.jpg">
+          <div class="online-friend"></div>
+        </div>
+        <h4>Laxim Mahmud</h4>
+      </div>
+      <div class="friends">
+        <div class="friendProfileImg">
+          <img src="profile.jpg">
+          <div class="online-friend"></div>
+        </div>
+        <h4>Laxim Mahmud</h4>
+      </div>
+      <div class="friends">
+        <div class="friendProfileImg">
+          <img src="profile.jpg">
+          <div class="online-friend"></div>
+        </div>
+        <h4>Laxim Mahmud</h4>
+      </div>
+      <div class="friends">
+        <div class="friendProfileImg">
+          <img src="profile.jpg">
+          <div class="online-friend"></div>
+        </div>
+        <h4>Laxim Mahmud</h4>
+      </div>
+      <div class="friends">
+        <div class="friendProfileImg">
+          <img src="profile.jpg">
+          <div class="online-friend"></div>
+        </div>
+        <h4>Laxim Mahmud</h4>
+      </div>
+      
+      
+    </div>
+  </div>
+  
+  <div class="profile-page-container">
+    <div class="profile-page ">
+      <div class="profile-into-container ">
+        <div class="cover-photo-container ">
+          <img class="cover-img">
+        </div>
+        <div class="profile-photo-circle">
+  <img src="no-profile.png" class="profile-img">
+</div>
+        <button type="button" class="Edit-profile-btn ">Edit profile</button>
+        <div class="profile-name-box ">
+          <h3 class="greet "></h3>
+          <p id="accountEmail"></p>
+        </div>
+        <div class="bio-container ">
+          <p id="bioText">Hello friend's welcome to my Socialbook account</p>
+        </div>
+        <div class="follower-container ">
+          <p><span class="follow-count">0</span> Following</p>
+          <p>•</p>
+          <p><span class="follow-count">0</span> Followers</p>
+        </div>
+      </div>
+      <div class="profile-page-post">
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="searchResult_profile_page">
+    <div class="search-profile-page ">
+      <div class="profile-into-container ">
+        <div class="cover-photo-container ">
+          <img class="search-user-coverImg">
+        </div>
+        <div class="profile-photo-circle">
+          <img class="search-user-profileImg" src="no-profile.png" >
+        </div>
+        <div class="search-profile-name-box ">
+          <h3></h3>
+        </div>
+        <div class="bio-container ">
+          <p id="bioText">Hello friend's welcome to my Socialbook account</p>
+        </div>
+        <div class="follower-container ">
+          <p><span class="follow-count">0</span> Following</p>
+          <p>•</p>
+          <p><span class="follow-count">0</span> Followers</p>
+        </div>
+        <div class="addFriendBtnBox">
+    <button type="button" class="frind_req_btn" id="addFriendBtn" data-user-id="TARGET_USER_ID">
+        <i class='bx bxs-user-plus'></i>
+        Add friend
+    </button>
+</div>
+      </div>
+      
+      
+      
+      
+      
+      <div class="profile-page-post">
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <div class="menu-page-container">
+    <div class="menu-page">
+      <h4>Menu</h4>
+      <div class="menu-profile-cird">
+        <div class="menu-profile-circle">
+          <img src="no-profile.png" class="profile-img">
+        </div>
+        <span class="menu-profile-name">
+          <h4 style="font-size: 14px;" class="greet"></h4>
+        </span>
+      </div>
+      <button type="button" class="lg-btn-menu">Log out</button>
+    </div>
+    
+    <div class="logout-popup-opachity">
+      <div class="lg-popup">
+        <p>Log out of your account?</p>
+        <div class="lg-two-btn-box">
+        <button type="button" class="calcleBtn">CANCEL</button>
+        <button type="button" class="lg logout-btn">Log out</button>
+      </div>
+      </div>
+    </div>
+  </div>
+ 
+ 
+ 
+  <div class="edit-profile-popup-opachity ">
+    
+    <div class="edit-profile-popup ">
+      <div class="edit-profile-popup-header ">
+        <h4>Edit Profile</h4>
+        <i class='bx bx-x-circle'></i>
+      </div>
+     <div class="popup-content-box ">
+       <label for="coverImgInp">
+        <div class="edit-profile-cover-box ">
+          <i class='bx bxs-camera'></i>
+        <img id="coverImgSelect">
+        <input type="file" id="coverImgInp" accept="image/*" style="display: none;" >
+      </div>
+      </label>
+      <label for="profileInp">
+      <div class="edit-profile-box ">
+         <i class='bx bxs-camera'></i>
+        <img id="profileImgSleted">
+        <input type="file" id="profileInp" accept="image/*" style="display: none;" >
+      </div>
+      </label>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="edit-input-box ">
+        <input id="editName" type="text" placeholder="Name">
+      </div>
+      <div class="edit-input-box">
+    <input type="text" id="bioInput" placeholder="Bio">
+</div>
+      <div class="save-btn-container ">
+        <button type="button" class="edit-save-btn">Save</button>
+      </div>
+     </div>
+    </div>
+    
+  </div>
+  
+  <div class="popup-opachity "> 
+    <div class="post-create-popup ">
+      <div class="post-create-header ">
+        <h4>Create post</h4>
+        <i class='bx bx-x-circle'></i>
+      </div>
+      <div class="popup-content-box ">
+        <div class="popup-profile-box ">
+          <div class="popup-profile ">
+            <img class="profile-img">
+          </div>
+          <h4 class="greet"></h4>
+        </div>
+        <div class="post-text-input ">
+          <textarea id="textareaPlaceholder" cols="3" rows="3" placeholder="What do you think"></textarea>
+        </div>
+        <label for="fileInput">
+        <div class="post-img-select-box ">
+          <div class="img-select-icon ">
+            <div class="icon-box ">
+              <i class='bx bxs-image'></i>
+            </div>
+              <h4>Add Photos</h4>
+          </div>
+          <input type="file" id="fileInput" accept="image/*" style="display: none;" >
+          <img id="selectedImage" >
+        </div>
+        </label>
+        <button class="postBtn" id="uploadBtn">POST</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="see-reaction-page-opachity">
+  <div class="see-reaction-page">
+    <div class="reaction-page-header">
+      <h4>People who reacted</h4>
+      <i class='bx bx-x-circle'></i>
+    </div>
+    <div id="reaction-list">
+      <!-- All reaction lists will be added dynamically here -->
+    </div>
+  </div>
+</div>
+
+  
+  <div class="st-view-page">
+      <div class="st-show-content-box">
+       <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="user-story-profile">
+        <img src="profile.jpg" class="user-st-profile-img">
+        <h4>Lazim Mahmud</h4>
+        <span>•</span>
+        <p>8h</p>
+      </div>
+      </div>
+    </div>
+  
+
+ <div class="friend-request-page">
+   
+   <div class="new-request-container">
+     <div class="request-profile">
+       <img src="profile.jpg">
+     </div>
+     <div class="request-details-box">
+       <h4>Lazim Mahmud</h4>
+       <p>Sent you a friend request</p>
+       <div class="reqst-actvty-btn">
+         <button type="button" class="rq-confirm">Accept</button>
+         <button type="button" class="dlt-rq-btn">Delete</button>
+       </div>
+     </div>
+   </div>
+   <div class="new-request-container">
+     <div class="request-profile">
+       <img src="profile.jpg">
+     </div>
+     <div class="request-details-box">
+       <h4>Lazim Mahmud</h4>
+       <p>Sent you a friend request</p>
+       <div class="reqst-actvty-btn">
+         <button type="button" class="rq-confirm">Accept</button>
+         <button type="button" class="dlt-rq-btn">Delete</button>
+       </div>
+     </div>
+   </div>
+   
+   
+ </div>
+ 
+ 
+ 
+ 
+
+
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+  import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-storage.js";
+  import { getDatabase, ref as dbRef, set, get,remove, onChildAdded, onChildRemoved, update, onChildChanged, onValue} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
+  
+  const firebaseConfig = {
+  apiKey: "AIzaSyBYC0Z_pFue4VDkwat4pRUz71_VmL3xI3Q",
+  authDomain: "test-socialbook.firebaseapp.com",
+  databaseURL: "https://test-socialbook-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "test-socialbook",
+  storageBucket: "test-socialbook.appspot.com",
+  messagingSenderId: "504297655058",
+  appId: "1:504297655058:web:b18fd06b52a2a8e4dbc1cb"
+};
+
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const storage = getStorage(app);
+  const database = getDatabase(app);
+
+
+  document.getElementById('fileInput').addEventListener('change', function(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('selectedImage').src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+});
+  
+  
+  
+function formatRelativeTime(isoDate) {
+  const now = new Date();
+  const postTime = new Date(isoDate);
+  const diffInSeconds = Math.floor((now - postTime) / 1000);
+
+  const options = {
+    month: 'short',   // Jun, Jul
+    day: 'numeric',   // 4, 5
+    year: 'numeric'   // 2024
+  };
+
+  if (diffInSeconds < 60) return `Just now`;
+  const diffInMinutes = Math.floor(diffInSeconds / 60);
+  if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
+  const diffInHours = Math.floor(diffInMinutes / 60);
+  if (diffInHours < 24) return `${diffInHours}h ago`;
+  const diffInDays = Math.floor(diffInHours / 24);
+  if (diffInDays <= 5) return `${diffInDays}d ago`;
+
+  // If more than 5 days, show formatted date like "Jun 4 2024"
+  return postTime.toLocaleDateString('en-US', options);
+}
+
+// Function to update post times in real-time
+function updatePostTimes() {
+  const allPostTimes = document.querySelectorAll('[id^="post-time-"]');
+  allPostTimes.forEach(postTimeElement => {
+    const postTime = postTimeElement.getAttribute('data-upload-time');
+    if (postTime) {
+      // Check if the post time is being updated correctly
+      postTimeElement.innerHTML = `${formatRelativeTime(postTime)} <span>•</span><span> <i class='bx bx-world'></i></span>`;
+    }
+  });
+}
+
+  // Event listener for upload button
+document.getElementById('uploadBtn').addEventListener('click', function () {
+    const text = document.getElementById('textareaPlaceholder').value;
+    const fileInput = document.getElementById('fileInput');
+    const file = fileInput.files[0];
+
+    if (text || file) {
+        setTimeout(function () {
+            const popupOpachityElement = document.querySelector('.popup-opachity');
+            if (popupOpachityElement) {
+                popupOpachityElement.style.display = 'none';
+                document.querySelector('.mobail-nav').style.zIndex = '1';
+            }
+        }, 10);
+
+        const userId = 'user123'; // Replace with actual user ID
+        const userFirstName = UserInfo.firstName;
+        const userLastName = UserInfo.lastName;
+        const postId = new Date().getTime(); // Unique post ID based on timestamp
+        const uploadTime = new Date().toISOString(); // Save current time
+
+        let imageUrl = '';
+        let profileImageUrl = '';
+
+        // Create the post upload progress container
+        const progressContainer = document.createElement('div');
+        progressContainer.className = 'post-upload-pogress-container';
+        const progressImage = document.createElement('img');
+        const progressText = document.createElement('p');
+        progressText.textContent = 'Posting...';
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                progressImage.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            progressImage.src = '';
+        }
+
+        const progressBar = document.createElement('span');
+        progressBar.className = 'imgUpProgress';
+
+        progressContainer.appendChild(progressImage);
+        progressContainer.appendChild(progressText);
+        progressContainer.appendChild(progressBar);
+        const postCreateContainer = document.querySelector('.main-story-container');
+        postCreateContainer.insertAdjacentElement('afterend', progressContainer);
+
+        // Function to simulate progress
+        let progress = 0;
+        const simulateProgress = setInterval(() => {
+            if (progress < 100) {
+                progress += 5; // Increment progress (adjust speed here)
+                progressBar.style.background = `conic-gradient(#A4D0FF ${progress}%, transparent 0)`; // Simulate the fill
+            } else {
+                clearInterval(simulateProgress); // Stop progress animation when complete
+            }
+        }, 150); // Speed of the progress increment
+
+        // Function to compress image
+function compressImage(file, quality = 0.8, maxWidth = 1920, maxHeight = 1080) {
+ return new Promise((resolve, reject) => {
+ const reader = new FileReader();
+ reader.onload = (event) => {
+ const img = new Image();
+ img.src = event.target.result;
+ img.onload = () => {
+ const canvas = document.createElement('canvas');
+ const ctx = canvas.getContext('2d');
+
+ let width = img.width;
+ let height = img.height;
+// Adjust dimensions if they exceed max size
+if (width > maxWidth || height > maxHeight) {
+if (width > height) {
+height = Math.round((height * maxWidth) / width);
+ width = maxWidth;
+} else {
+ width = Math.round((width * maxHeight) / height);
+ height = maxHeight;
+ }
+}
+
+ canvas.width = width;
+ canvas.height = height;
+ ctx.drawImage(img, 0, 0, width, height);
+
+ canvas.toBlob(
+ (blob) => {
+ resolve(new File([blob], file.name, { type: file.type }));
+},
+file.type,
+quality // Compression level (0.8 = 80% quality)
+ );
+};
+  img.onerror = reject;
+ };
+ reader.onerror = reject;
+ reader.readAsDataURL(file);
+  });
+}
+
+// Upload image function
+const uploadImage = () => {
+  return new Promise((resolve, reject) => {
+  if (file) {
+  compressImage(file, 0.9) // Compression level (0.9)
+  .then((compressedFile) => {
+  const storageRef = ref(storage, 'images/' + postId + '-' + compressedFile.name);
+  uploadBytes(storageRef, compressedFile)
+  .then((snapshot) => {
+   getDownloadURL(snapshot.ref)
+   .then((url) => {
+   imageUrl = url;
+   clearInterval(simulateProgress); // Stop progress animation
+   progressBar.style.background = `conic-gradient(var(--main-color) 100%, transparent 0)`; // Complete progress bar
+     resolve();
+ })
+  .catch(reject);
+ })
+ .catch(reject);
+ })
+ .catch(reject);
+ } else {
+ resolve();
+   }
+ });
+};
+
+// Fetch profile image from Firebase Realtime Database
+const fetchProfileImage = () => {
+    return new Promise((resolve, reject) => {
+        let UserCreds = JSON.parse(localStorage.getItem('user-creds'));
+        let UserInfo = JSON.parse(localStorage.getItem('user-info'));
+        
+        if (UserCreds && UserCreds.email && UserInfo && UserInfo.firstName && UserInfo.lastName) {
+            const email = UserCreds.email;
+            const formattedEmail = email.replace('.', ','); // Format email for database key
+            const userName = `${UserInfo.firstName} ${UserInfo.lastName}`;
+            const userProfileDetailsRef = dbRef(database, `User_Profile_details/${formattedEmail}/${userName}`);
+
+            get(userProfileDetailsRef)
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        const data = snapshot.val();
+                        if (data.profileImageURL) {
+                            profileImageUrl = data.profileImageURL;
+                            console.log('Profile image URL fetched:', profileImageUrl); // Debugging line
+                        } else {
+                            console.log('No profile image URL found for this user.');
+                        }
+                        resolve();
+                    } else {
+                        console.log('No profile details found for this user.');
+                        resolve(); // Resolve even if no data found
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error fetching profile image:', error);
+                    reject(error);
+                });
+        } else {
+            console.error('No user credentials or user info found in local storage.');
+            resolve(); // Resolve even if no user credentials or info
+        }
+    });
+};
+
+// Save text and user details to Firebase Realtime Database
+Promise.all([uploadImage(), fetchProfileImage()])
+    .then(() => {
+        let UserCreds = JSON.parse(localStorage.getItem('user-creds'));
+        const userEmail = UserCreds ? UserCreds.email : 'unknown';
+        
+        return set(dbRef(database, 'All_Post/' + postId), {
+            userId: userId,
+            firstName: userFirstName,
+            lastName: userLastName,
+            userEmail: userEmail, // Add the user's email here
+            text: text,
+            timestamp: postId,
+            uploadTime: uploadTime,
+            imageUrl: imageUrl,
+            profileImageUrl: profileImageUrl,
+            likes: 0,
+            likedUsers: {} // Initialize as an empty object
+        });
+    })
+    .then(() => {
+        document.getElementById('textareaPlaceholder').value = '';
+        document.getElementById('fileInput').value = '';
+        document.getElementById('selectedImage').src = '';
+        document.querySelector('.post-upload-pogress-container').style.display = 'none'; // Hide progress container
+
+        // Play the post upload sound
+        const postSound = document.getElementById('postSound');
+        postSound.play();
+    })
+    .catch((error) => {
+        console.error('Error creating post: ', error);
+    });
+    } else {
+        alert('Please write something or select an image before posting.');
+    }
+});
+
+// Fetch and display posts when the page loads
+window.addEventListener('load', () => {
+    const loadingContainer = document.querySelector('.loading-post-container');
+    loadingContainer.style.display = 'block';
+
+    let initialLoadCompleted = false;
+    const newFeedNotification = document.querySelector('.newFeedNotification');
+
+    // Function to handle new posts
+    const handleNewPost = () => {
+        if (localStorage.getItem('notificationHidden') !== 'true') {
+            newFeedNotification.style.display = 'block';
+        }
+    };
+
+    // Check local storage to hide notification if it was previously hidden
+    if (localStorage.getItem('notificationHidden') === 'true') {
+        newFeedNotification.style.display = 'none';
+    }
+
+    // Function to update post times
+    const updatePostTimes = () => {
+        // Your existing logic to update post times
+    };
+
+    // Function to check if there are no posts
+    const checkNoPosts = () => {
+        const postContainer = document.querySelector('.post-create-container');
+        const posts = postContainer.querySelectorAll('.post');
+        if (posts.length === 0) {
+            loadingContainer.style.display = 'block';
+        }
+    };
+
+// Get the current logged-in user's email from localStorage
+const currentUserEmail = JSON.parse(localStorage.getItem('user-creds')).email;
+
+onChildAdded(dbRef(database, 'All_Post'), (snapshot) => {
+    if (snapshot.exists()) {
+        const post = snapshot.val();
+        const postId = snapshot.key;
+        const postContainer = document.querySelector('.main-story-container');
+        const profilePagePostContainer = document.querySelector('.profile-page-post');
+
+        if (document.getElementById(`post-${postId}`)) {
+            return;
+        }
+
+        // Create the post element
+        const postElement = document.createElement('div');
+        postElement.className = 'post';
+        postElement.id = `post-${postId}`;
+
+        const imageHTML = post.imageUrl ? `<div class="post-img"><img src="${post.imageUrl}" class="lazyload" id="databaseImg"></div>` : '';
+        const profileImageHTML = post.profileImageUrl ? `<img src="${post.profileImageUrl}">` : `<img src="no-profile.png">`;
+
+        const likeCountText = `${post.likes || 0} `;
+
+        postElement.innerHTML = `
+            <div class="post-header_and_post_content">
+                <div class="profile-box">
+                    <div class="post-profile">
+                        ${profileImageHTML}
+                    </div>
+                </div>
+                <div class="post-userName-andtime">
+                    <h4>${post.firstName} ${post.lastName}</h4>
+                    <p class="span" id="post-time-${postId}" data-upload-time="${post.uploadTime}">
+                        ${formatRelativeTime(post.uploadTime)} 
+                        <span>•</span>
+                        <span><i class='bx bx-world'></i></span>
+                    </p>
+                </div>
+                <div class="post-menu">
+                    <i class='bx bx-dots-vertical-rounded'></i>
+                </div>
+            </div>
+            <div class="post-text">
+                <p>${convertLinks(post.text.replace(/\n/g, '<br>'))}</p>
+            </div>
+            ${imageHTML}
+            <div class="activity-content-box">
+                <div class="like-content">
+                    <img class="like-round-icon" src="like-round.png">
+                    <h4 id="likeCount-${postId}">${likeCountText}</h4>
+                </div>
+                <div class="comment-content">
+                    <p>0 Comment</p>
+                </div>
+            </div>
+            <div class="post-activity-container">
+                <div class="post-activity-box">
+                    <div class="like-box" id="like-box-${postId}">
+                        <img id="likeGray-${postId}" src="like.png">
+                        <img id="likeBlue-${postId}" src="like-blue.png" style="display:none;">
+                        <h4 id="likeText">Like</h4>
+                    </div>
+                    <div class="like-box">
+                        <img src="comment.png">
+                        <h4>Comment</h4>
+                    </div>
+                    <div class="like-box">
+                        <img src="share.png">
+                        <h4>Share</h4>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Insert the post into the main story container
+        postContainer.insertAdjacentElement('afterend', postElement);
+
+        // Check if the post's userEmail matches the current user's email before adding to the profile page container
+        console.log('Post User Email:', post.userEmail);
+        console.log('Current User Email:', currentUserEmail);
+        
+        if (profilePagePostContainer && post.userEmail === currentUserEmail) {
+            console.log('Adding post to profile page:', postId);
+            const profilePostElement = postElement.cloneNode(true); // Clone the post element
+
+            // Insert the new post at the top of the profile page post container
+            profilePagePostContainer.insertBefore(profilePostElement, profilePagePostContainer.firstChild);
+        }
+
+        // Hide the loading container only once, after the first post is added
+        if (!initialLoadCompleted) {
+            loadingContainer.style.display = 'none';
+            initialLoadCompleted = true;
+        }
+
+        // Clear notification hidden status when a new post is added
+        localStorage.removeItem('notificationHidden');
+
+        setInterval(updatePostTimes, 60000);
+    }
+}, (error) => {
+    console.error("Error fetching posts with onChildAdded: ", error);
+});
+
+    onChildRemoved(dbRef(database, 'All_Post'), (snapshot) => {
+        const postId = snapshot.key;
+
+        const postElement = document.getElementById(`post-${postId}`);
+        if (postElement) {
+            postElement.remove();
+        }
+
+        checkNoPosts();
+    }, (error) => {
+        console.error("Error fetching posts with onChildRemoved: ", error);
+    });
+
+    // Hide notification on click and set localStorage to remember
+    newFeedNotification.addEventListener('click', () => {
+        newFeedNotification.style.display = 'none';
+        localStorage.setItem('notificationHidden', 'true');
+    });
+
+    // Hide notification on homNavM click
+    document.querySelector('#homNavM').addEventListener('click', () => {
+        newFeedNotification.style.display = 'none';
+        localStorage.setItem('notificationHidden', 'true');
+    });
+
+    // Optionally, hide the notification when the user scrolls to the posts section
+    window.addEventListener('scroll', () => {
+        const postContainer = document.querySelector('.post-create-container');
+        const postContainerPosition = postContainer.getBoundingClientRect().top;
+        if (postContainerPosition < window.innerHeight) {
+            newFeedNotification.style.display = 'none';
+            localStorage.setItem('notificationHidden', 'true');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const likeSound = new Audio('like.mp3'); // Preload the like sound
+
+    // Get the user email from local storage
+    const userEmail = JSON.parse(localStorage.getItem('user-creds')).email;
+    const userId = btoa(userEmail);
+
+
+
+// Function to handle like and unlike action for a post
+const handleLike = async (postId) => {
+    const likeGray = document.getElementById(`likeGray-${postId}`);
+    const likeBlue = document.getElementById(`likeBlue-${postId}`);
+
+    // Fetch the post from the database
+    const postRef = dbRef(database, 'All_Post/' + postId);
+    try {
+        const snapshot = await get(postRef);
+        if (snapshot.exists()) {
+            const post = snapshot.val();
+            const likedUsers = post.likedUsers || {};
+            const userLikeList = post.userLikeList || {};
+
+            // Retrieve the user's name from local storage or user info
+            const UserInfo = JSON.parse(localStorage.getItem('user-info'));
+            const userName = UserInfo?.firstName && UserInfo?.lastName ? `${UserInfo.firstName} ${UserInfo.lastName}` : 'Unknown User';
+
+            // Get the latest profile image URL directly from the user profile
+            const profileImageURL = await getProfileImageURL();
+
+            // Check if the user has already liked the post
+            if (likedUsers[userId]) {
+                // User already liked the post, so we remove the like
+                delete likedUsers[userId];
+                delete userLikeList[userId]; // Remove user from userLikeList
+                await update(dbRef(database, 'All_Post/' + postId), {
+                    likedUsers: likedUsers,
+                    userLikeList: userLikeList,
+                    likes: (post.likes || 0) - 1
+                });
+                updateLikeDisplay(postId);
+            } else {
+                // User has not liked this post, so we add the like
+                likedUsers[userId] = true;
+                userLikeList[userId] = {
+                    name: userName,
+                    profileImage: profileImageURL // Use the latest profile image
+                }; // Store user's name and profile picture
+
+                await update(dbRef(database, 'All_Post/' + postId), {
+                    likedUsers: likedUsers,
+                    userLikeList: userLikeList,
+                    likes: (post.likes || 0) + 1
+                });
+                updateLikeDisplay(postId);
+
+                // Play the like sound
+                likeSound.play();
+            }
+        }
+    } catch (error) {
+        console.error("Error handling like: ", error);
+    }
+};
+async function getProfileImageURL() {
+    const UserCreds = JSON.parse(localStorage.getItem('user-creds'));
+    if (UserCreds && UserCreds.email) {
+        const formattedEmail = UserCreds.email.replace('.', ',');
+        const userInfo = JSON.parse(localStorage.getItem('user-info'));
+        const userName = userInfo?.firstName && userInfo?.lastName ? `${userInfo.firstName} ${userInfo.lastName}` : 'Unknown User';
+
+        const userProfileDetailsRef = dbRef(database, 'User_Profile_details/' + formattedEmail + '/' + userName);
+        const snapshot = await get(userProfileDetailsRef);
+        if (snapshot.exists()) {
+            const data = snapshot.val();
+            return data.profileImageURL || ''; // Return the latest profile image URL
+        }
+    }
+    return ''; // Return an empty string if no profile image is found
+}
+
+const formatLikes = (likes) => {
+    if (likes >= 1000000000) {
+        return (likes / 1000000000).toFixed(1).replace(/\.0$/, '') + 'B';
+    } else if (likes >= 1000000) {
+        return (likes / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+    } else if (likes >= 1000) {
+        return (likes / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+    }
+    return likes;
+};
+const updateLikeDisplay = (postId) => {
+    
+
+    const likeCountElement = document.getElementById(`likeCount-${postId}`);
+    const likeGray = document.getElementById(`likeGray-${postId}`);
+    const likeBlue = document.getElementById(`likeBlue-${postId}`);
+    const likeContentBox = document.querySelector(`#post-${postId} .like-content`);
+    const seeReactionPageOpacity = document.querySelector('.see-reaction-page-opachity');
+    let reactionList = document.getElementById(`reaction-list-${postId}`);
+
+    // If reactionList is missing, create it dynamically
+    if (!reactionList) {
+        
+        reactionList = document.createElement('div');
+        reactionList.id = `reaction-list-${postId}`;
+        reactionList.classList.add('reaction-list'); // Add a class if needed
+    }
+
+    // Log if elements are missing
+    if (!likeCountElement) console.error(`Missing likeCountElement for postId: ${postId}`);
+    if (!likeGray) console.error(`Missing likeGray for postId: ${postId}`);
+    if (!likeBlue) console.error(`Missing likeBlue for postId: ${postId}`);
+    if (!likeContentBox) console.error(`Missing likeContentBox for postId: ${postId}`);
+
+    // If any element is missing, return early to avoid errors
+    if (!likeCountElement || !likeGray || !likeBlue || !likeContentBox) {
+        
+        return;
+    }
+
+    // Fetch the post from the database
+    const postRef = dbRef(database, 'All_Post/' + postId);
+    get(postRef)
+        .then((snapshot) => {
+            if (snapshot.exists()) {
+                const post = snapshot.val();
+                
+                const likedUsers = post.userLikeList || {};
+
+                // Toggle like button display
+                if (likedUsers[userId]) {
+                    likeGray.style.display = 'none';
+                    likeBlue.style.display = 'block';
+                    
+                } else {
+                    likeGray.style.display = 'block';
+                    likeBlue.style.display = 'none';
+                    
+                }
+
+                // Update like count only inside .like-content
+                if (likeCountElement) {
+                    const formattedLikes = formatLikes(post.likes || 0);
+                    likeCountElement.textContent = `${formattedLikes} `;
+                }
+
+                // Update like-content-box display based on like count
+                if (likeContentBox) {
+                    if (post.likes > 0) {
+                        likeContentBox.style.display = 'flex';
+                        
+                    } else {
+                        likeContentBox.style.display = 'none';
+                        
+                    }
+
+                    // Clear previous reactions
+                    reactionList.innerHTML = ''; // Clear the old reactions
+                    
+
+                    // Loop through likedUsers and display their info
+                    for (const userId in likedUsers) {
+                        const user = likedUsers[userId];
+                        const reactionBox = document.createElement('div');
+                        reactionBox.classList.add('reaction-box');
+
+                        reactionBox.innerHTML = `  <div class="reactProfile">
+                            <img class="react-user-profile" src="${user.profileImage}">
+                            
+                            </div>
+                            <img src="like-round.png" class="reaction-img">
+                            <h4>${user.name}</h4>
+                        `;
+                        reactionList.appendChild(reactionBox);
+                        
+                    }
+
+                    // Show the reaction page when like-content is clicked
+                    likeContentBox.addEventListener('click', () => {
+                        // Clear and set the new reaction list in the opacity div
+                        seeReactionPageOpacity.innerHTML = ''; // Clear previous contents
+                        const reactionPage = document.createElement('div');
+                        reactionPage.classList.add('see-reaction-page'); // Ensure the structure matches your HTML
+
+                        reactionPage.innerHTML = `
+                            <div class="reaction-page-header">
+                                <h4>People who reacted</h4>
+                                <i class='bx bx-x-circle' id="close-reaction-page"></i>
+                            </div>
+                        `;
+                        reactionPage.appendChild(reactionList); // Append the reaction list to the new structure
+                        seeReactionPageOpacity.appendChild(reactionPage); // Append the reaction page to opacity
+
+                        seeReactionPageOpacity.style.display = 'flex'; // Show the opacity div
+                        
+
+                        // Add event listener for closing the reaction page
+                        const closeButton = document.getElementById('close-reaction-page');
+                        closeButton.addEventListener('click', () => {
+                            seeReactionPageOpacity.style.display = 'none'; // Hide the reaction page
+                        });
+                    });
+                }
+            } else {
+                console.error('Post not found in the database for postId:', postId);
+            }
+        })
+        .catch((error) => {
+            console.error('Error updating like display: ', error);
+        });
+};
+
+
+
+
+
+// Event listener for like buttons
+document.addEventListener('click', function (event) {
+    if (event.target.matches('.like-box') || event.target.closest('.like-box')) {
+        const postId = event.target.closest('.like-box').id.split('-')[2];
+        handleLike(postId);
+    }
+});
+
+
+
+
+
+
+
+// Listen for changes in the likes count in real-time and update the UI
+onValue(dbRef(database, 'All_Post'), (snapshot) => {
+    snapshot.forEach((postSnapshot) => {
+        const post = postSnapshot.val();
+        const postId = postSnapshot.key;
+        
+        // Update the like display
+        updateLikeDisplay(postId);
+    });
+}, (error) => {
+    console.error("Error updating like counts in real-time: ", error);
+});
+
+
+
+    // Fetch and display posts when the page loads
+    window.addEventListener('load', () => {
+        const loadingContainer = document.querySelector('.loading-post-container');
+        loadingContainer.style.display = 'block';
+
+        let initialLoadCompleted = false;
+        const newFeedNotification = document.querySelector('.newFeedNotification');
+
+        // Function to handle new posts
+        const handleNewPost = () => {
+            if (localStorage.getItem('notificationHidden') !== 'true') {
+                newFeedNotification.style.display = 'block';
+            }
+        };
+
+        // Check local storage to hide notification if it was previously hidden
+        if (localStorage.getItem('notificationHidden') === 'true') {
+            newFeedNotification.style.display = 'none';
+        }
+
+        // Function to update post times
+        const updatePostTimes = () => {
+            // Your existing logic to update post times
+        };
+
+        // Function to check if there are no posts
+        const checkNoPosts = () => {
+            const postContainer = document.querySelector('.post-create-container');
+            const posts = postContainer.querySelectorAll('.post');
+            if (posts.length === 0) {
+                loadingContainer.style.display = 'block';
+            }
+        };
+
+        // Listen for new posts and add them to the DOM
+        onChildAdded(dbRef(database, 'All_Post'), (snapshot) => {
+            if (snapshot.exists()) {
+                const post = snapshot.val();
+                const postId = snapshot.key;
+                const postContainer = document.querySelector('.post-create-container');
+
+                if (document.getElementById(`post-${postId}`)) {
+                    return;
+                }
+
+                // Show the new feed notification if the user has not hidden it
+                handleNewPost();
+
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+                postElement.id = `post-${postId}`;
+
+                const imageHTML = post.imageUrl ? `<div class="post-img"><img src="${post.imageUrl}" class="lazyload" id="databaseImg"></div>` : '';
+                const profileImageHTML = post.profileImageUrl
+                    ? `<img src="${post.profileImageUrl}">`
+                    : `<img src="no-profile.png">`;
+
+                // Set the like count text based on the current like count from the database
+                const likeCountText = `${post.likes || 0} `;
+
+                postElement.innerHTML = `
+                    <div class="post-header_and_post_content">
+                        <div class="profile-box">
+                            <div class="post-profile">
+                                ${profileImageHTML}
+                            </div>
+                        </div>
+                        <div class="post-userName-andtime">
+                            <h4>${post.firstName} ${post.lastName}</h4>
+                            <p class="span" id="post-time-${postId}" data-upload-time="${post.uploadTime}">${formatRelativeTime(post.uploadTime)} <span>•</span><span> <i class='bx bx-world'></i></span></p>
+                        </div>
+                        <div class="post-menu">
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </div>
+                    </div>
+                    <div class="post-text">
+                        <p>${post.text.replace(/\n/g, '<br>')}</p>
+                    </div>
+                    ${imageHTML}
+                    <div class="post-activity-container">
+                        <div class="post-activity-box">
+                            <div class="like-box" id="like-box-${postId}">
+                                <img id="likeGray-${postId}" src="like.png">
+                                <img id="likeBlue-${postId}" src="like-blue.png" style="display:none;">
+                                <h4 id="likeText-${postId}">${likeCountText}</h4> <!-- Show the like count -->
+                            </div>
+                            <div class="like-box">
+                                <img src="comment.png">
+                                <h4>Comment</h4>
+                            </div>
+                            <div class="like-box">
+                                <img src="share.png">
+                                <h4>Share</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-comment-container">
+                        <div class="comment-profile">
+                            <img class="profile-img">
+                        </div>
+                        <div class="comment-inp-box">
+                            <input type="text" placeholder="Add a comment...">
+                        </div>
+                        <button class="comment-send-button" type="button"><i class='bx bxs-send'></i></button>
+                    </div>`;
+
+                postContainer.insertAdjacentElement('afterend', postElement);
+
+                // Hide the loading container only once, after the first post is added
+                if (!initialLoadCompleted) {
+                    loadingContainer.style.display = 'none';
+                    initialLoadCompleted = true;
+                }
+
+                // Clear notification hidden status when a new post is added
+                localStorage.removeItem('notificationHidden');
+
+                setInterval(updatePostTimes, 60000);
+            }
+        }, (error) => {
+            console.error("Error fetching posts with onChildAdded: ", error);
+        });
+
+        onChildRemoved(dbRef(database, 'All_Post'), (snapshot) => {
+            const postId = snapshot.key;
+
+            const postElement = document.getElementById(`post-${postId}`);
+            if (postElement) {
+                postElement.remove();
+            }
+
+            checkNoPosts();
+        }, (error) => {
+            console.error("Error fetching posts with onChildRemoved: ", error);
+        });
+
+        // Hide notification on click and set localStorage to remember
+        newFeedNotification.addEventListener('click', () => {
+          newFeedNotification.style.display = 'none';
+            localStorage.setItem('notificationHidden', 'true');
+        });
+
+        // Hide notification on homNavM click
+        document.querySelector('#homNavM').addEventListener('click', () => {
+            newFeedNotification.style.display = 'none';
+            localStorage.setItem('notificationHidden', 'true');
+        });
+
+        // Optionally, hide the notification when the user scrolls to the posts section
+        window.addEventListener('scroll', () => {
+            const postContainer = document.querySelector('.post-create-container');
+            const postContainerPosition = postContainer.getBoundingClientRect().top;
+            if (postContainerPosition < window.innerHeight) {
+                newFeedNotification.style.display = 'none';
+                localStorage.setItem('notificationHidden', 'true');
+            }
+        });
+    });
+
+
+});
+
+function convertLinks(text) {
+    const urlPattern = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;
+    return text.replace(urlPattern, '<a href="$1" target="_blank">$1</a>');
+}
+
+
+// Lazy loading with IntersectionObserver
+document.addEventListener("DOMContentLoaded", function() {
+  const lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazyload");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } else {
+    // Fallback for older browsers
+    lazyImages.forEach(function(lazyImage) {
+      lazyImage.src = lazyImage.dataset.src;
+      lazyImage.classList.remove("lazyload");
+    });
+  }
+});
+
+
+
+
+// user search algorithm
+// Add an event listener for the Enter key in the search input
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+  }
+
+  // Input event listener with debounce
+  document.getElementById('searchInp').addEventListener('input', debounce(async () => {
+    const keyword = document.getElementById('searchInp').value.trim();
+    
+    if (!keyword) {
+      // Clear results if input is empty
+      document.getElementById('searchContentBox').innerHTML = '';
+      return;
+    }
+    
+    await searchProfilesByKeyword(keyword);
+  }, 300));  // 300ms debounce delay
+
+  // Function to search profiles by keyword
+  async function searchProfilesByKeyword(keyword) {
+    // Reference to the path for user profile details
+    const userProfileDetailsRef = dbRef(database, 'User_Profile_details');
+
+    try {
+      const searchContentBox = document.getElementById('searchContentBox');
+      
+      // Show loading indicator
+      searchContentBox.innerHTML = '<p class="searchLoading">Loading...</p>';
+
+      // Get all user profile details
+      const snapshot = await get(userProfileDetailsRef);
+      
+      // Clear previous results
+      searchContentBox.innerHTML = '';
+
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+        let resultsFound = false;
+
+        for (const email in data) {
+          for (const userName in data[email]) {
+            if (userName.toLowerCase().includes(keyword.toLowerCase())) {
+              resultsFound = true;
+              const profileData = data[email][userName];
+              
+              // Create a new result box
+              const resultUserBox = document.createElement('div');
+              resultUserBox.classList.add('result-user-box');
+
+              // Add click event listener to display searchResult_profile_page, update profile details, and change URL
+              resultUserBox.addEventListener('click', () => {
+                // Display the search result profile page
+                document.querySelector('.searchResult_profile_page').style.display = 'block';
+                document.querySelector('.main-container').style.display = 'none';
+                document.querySelector('.profile-page-container').style.display = 'none';
+                document.querySelector('.dropdown-search-box').style.display = 'none';
+                homeGray.style.display = 'block';
+                homeBlue.style.display = 'none';
+                profileBlue.style.display = 'none';
+                profileGray.style.display = 'block';
+                underline.style.display = 'none';
+
+                // Update the profile name in the profile-name-box
+                const profileNameElement = document.querySelector('.search-profile-name-box h3');
+                profileNameElement.textContent = profileData.name || 'Socialbook User';  // Display the name from the database
+
+                // Update the cover image
+                const coverImgElement = document.querySelector('.search-user-coverImg');
+                coverImgElement.src = profileData.coverImageURL || 'path/to/default/cover/image.jpg'; // Default placeholder image
+
+                // Update the profile image
+                const profileImgElement = document.querySelector('.search-user-profileImg');
+                profileImgElement.src = profileData.profileImageURL || 'no-profile.png'; // Default placeholder image
+
+                // Change the URL in the browser's address bar
+                const newUrl = `${window.location.origin}/${userName}`;
+                window.history.pushState({ userName }, '', newUrl);
+              });
+
+              // Create elements for profile image, name, and status
+              const profileImg = document.createElement('img');
+              profileImg.id = 'profileImg';
+              profileImg.src = profileData.profileImageURL || 'no-profile.png'; // Default placeholder image
+              
+
+              const resultUserProfile = document.createElement('div');
+              resultUserProfile.classList.add('result-user-profile');
+              resultUserProfile.appendChild(profileImg);
+
+              const userNameElement = document.createElement('h4');
+              userNameElement.id = 'userName';
+              userNameElement.textContent = profileData.name || 'No name found';
+
+              const status = document.createElement('p');
+              status.textContent = 'Not Friend';
+
+              const resultUserName = document.createElement('div');
+              resultUserName.classList.add('result-user-name');
+              resultUserName.appendChild(userNameElement);
+              resultUserName.appendChild(status);
+
+              const closeButton = document.createElement('i');
+              closeButton.classList.add('bx', 'bx-x');
+              closeButton.onclick = () => resultUserBox.remove();
+
+              resultUserBox.appendChild(resultUserProfile);
+              resultUserBox.appendChild(resultUserName);
+              resultUserBox.appendChild(closeButton);
+
+              searchContentBox.classList.remove('hidden');
+              searchContentBox.classList.add('visible');
+              searchContentBox.appendChild(resultUserBox);
+            }
+          }
+        }
+        
+        if (!resultsFound) {
+          searchContentBox.innerHTML = '<p class="SearchErrorMsg">No profiles found matching your query.</p>';
+        }
+
+      } else {
+        searchContentBox.innerHTML = '<p class="SearchErrorMsg">No profiles available.</p>';
+      }
+
+    } catch (error) {
+      console.error('Error fetching user profiles:', error);
+      document.getElementById('searchContentBox').innerHTML = '<p class="SearchErrorMsg">An error occurred while searching for profiles.</p>';
+    }
+  }
+
+  // Listen for the 'popstate' event, which is triggered when the user navigates back
+  window.onpopstate = function(event) {
+    if (event.state && event.state.userName) {
+      underline.style.display = 'none';
+      document.querySelector('.searchResult_profile_page').style.display = 'block';
+    } else {
+      underline.style.display = 'block';
+      document.querySelector('.searchResult_profile_page').style.display = 'none';
+      document.querySelector('.main-container').style.display = 'flex';
+      homeGray.style.display = 'none';
+      homeBlue.style.display = 'block';
+    }
+  };
+
+  
+  
+  
+  // profile and cover image upload 
+document.querySelector('.edit-save-btn').addEventListener('click', async () => {
+    const profileFile = document.getElementById('profileInp').files[0];
+    const coverFile = document.getElementById('coverImgInp').files[0];
+    const bio = document.getElementById('bioInput').value;
+
+    let UserCreds = JSON.parse(localStorage.getItem('user-creds'));
+    if (UserCreds && UserCreds.email) {
+        const email = UserCreds.email;
+        const formattedEmail = email.replace('.', ',');
+        
+        const UserInfo = JSON.parse(localStorage.getItem('user-info'));
+        let userName = '';
+
+        if (UserInfo && UserInfo.firstName && UserInfo.lastName) {
+            userName = `${UserInfo.firstName} ${UserInfo.lastName}`;
+        } else {
+            console.error('User info not found or incomplete.');
+            return;
+        }
+
+        const userProfileDetailsRef = dbRef(database, 'User_Profile_details/' + formattedEmail + '/' + userName);
+        const userAuthInfoRef = dbRef(database, 'User_Auth_info/' + formattedEmail);
+
+        try {
+            const snapshot = await get(userProfileDetailsRef);
+            let currentData = {};
+            if (snapshot.exists()) {
+                currentData = snapshot.val();
+            }
+
+            currentData.name = userName;
+
+            if (bio) {
+                currentData.bio = bio;
+            }
+
+            let profileDownloadURL;
+            let coverDownloadURL;
+
+            const resizeImage = (file, maxWidth, maxHeight) => {
+                return new Promise((resolve, reject) => {
+                    if (file) {
+                        const img = new Image();
+                        const reader = new FileReader();
+
+                        reader.onload = (e) => {
+                            img.src = e.target.result;
+                        };
+
+                        img.onload = () => {
+                            const canvas = document.createElement('canvas');
+                            const ctx = canvas.getContext('2d');
+
+                            let width = img.width;
+                            let height = img.height;
+
+                            if (width > maxWidth || height > maxHeight) {
+                                if (width / height > maxWidth / maxHeight) {
+                                    height = Math.round((height * maxWidth) / width);
+                                    width = maxWidth;
+                                } else {
+                                    width = Math.round((width * maxHeight) / height);
+                                    height = maxHeight;
+                                }
+                            }
+
+                            canvas.width = width;
+                            canvas.height = height;
+                            ctx.drawImage(img, 0, 0, width, height);
+
+                            canvas.toBlob(
+                                (blob) => {
+                                    resolve(blob);
+                                },
+                                file.type,
+                                0.9
+                            );
+                        };
+
+                        img.onerror = (err) => {
+                            reject(err);
+                        };
+
+                        reader.readAsDataURL(file);
+                    } else {
+                        reject(new Error('No file provided for resizing.'));
+                    }
+                });
+            };
+
+            if (profileFile) {
+                const resizedProfileFile = await resizeImage(profileFile, 800, 800);
+                const profileImgRef = ref(storage, 'profileImages/' + formattedEmail + '/' + userName + '_' + profileFile.name);
+                const uploadResult = await uploadBytes(profileImgRef, resizedProfileFile);
+                profileDownloadURL = await getDownloadURL(uploadResult.ref);
+                currentData.profileImageURL = profileDownloadURL;
+
+                // Update profile image URL in User_Auth_info
+                await update(userAuthInfoRef, { profileImageURL: profileDownloadURL });
+            }
+
+            if (coverFile) {
+                const resizedCoverFile = await resizeImage(coverFile, 1600, 600);
+                const coverImgRef = ref(storage, 'coverImages/' + formattedEmail + '/' + userName + '_' + coverFile.name);
+                const coverUploadResult = await uploadBytes(coverImgRef, resizedCoverFile);
+                coverDownloadURL = await getDownloadURL(coverUploadResult.ref);
+                currentData.coverImageURL = coverDownloadURL;
+            }
+
+            // Update User_Profile_details with current data
+            await set(userProfileDetailsRef, currentData);
+
+            alert('Profile and/or cover images and bio updated successfully!');
+
+            // Update UI with new image URLs and bio
+            if (profileDownloadURL) {
+                const profileImgs = document.querySelectorAll('.profile-img');
+                profileImgs.forEach((img) => {
+                    img.src = profileDownloadURL;
+                });
+            }
+
+            if (coverDownloadURL) {
+                const coverImgs = document.querySelectorAll('.cover-img');
+                coverImgs.forEach((img) => {
+                    img.src = coverDownloadURL;
+                });
+            }
+
+            if (bio) {
+                document.getElementById('bioText').textContent = bio;
+            }
+        } catch (error) {
+            console.error('Error uploading images and bio:', error);
+        }
+    } else {
+        console.error('No email found in user creds.');
+    }
+});
+
+  
+  
+  // profile and cover photo fetch 
+const loadProfileAndCoverImages = async () => {
+    let UserCreds = JSON.parse(localStorage.getItem("user-creds"));
+    if (UserCreds && UserCreds.email) {
+        const email = UserCreds.email;
+        const formattedEmail = email.replace('.', ','); // Format email for database key
+
+        // Retrieve user info from local storage
+        const UserInfo = JSON.parse(localStorage.getItem('user-info'));
+        let userName = '';
+
+        if (UserInfo && UserInfo.firstName && UserInfo.lastName) {
+            userName = `${UserInfo.firstName} ${UserInfo.lastName}`;
+        } else {
+            console.error('User info not found or incomplete.');
+            return;
+        }
+
+        // Reference the path as User_Profile_details/{email}/{name}
+        const userProfileDetailsRef = dbRef(database, 'User_Profile_details/' + formattedEmail + '/' + userName);
+
+        try {
+            const snapshot = await get(userProfileDetailsRef);
+            if (snapshot.exists()) {
+                const data = snapshot.val();
+                
+                // Load Profile Image
+                if (data.profileImageURL) {
+                    const profileImageURL = data.profileImageURL;
+                    const profileImages = document.querySelectorAll('.profile-img');
+                    profileImages.forEach(img => {
+                        img.src = profileImageURL;
+                    });
+                } else {
+                    console.log('No profile image found for this user.');
+                }
+
+                // Load Cover Image
+                if (data.coverImageURL) {
+                    const coverImageURL = data.coverImageURL;
+                    const coverImages = document.querySelectorAll('.cover-img');
+                    coverImages.forEach(img => {
+                        img.src = coverImageURL;
+                    });
+                } else {
+                    console.log('No cover image found for this user.');
+                }
+            } else {
+                console.log('No profile details found for this user.');
+            }
+        } catch (error) {
+            console.error('Error fetching profile and cover image URLs:', error);
+        }
+    } else {
+        console.error('No user credentials found in local storage.');
+    }
+};
+
+window.addEventListener('load', loadProfileAndCoverImages);
+  
+  
+  
+  
+document.getElementById('addFriendBtn').addEventListener('click', async (e) => {
+    const loggedInUserCreds = JSON.parse(localStorage.getItem('user-creds')); // লগইন করা ইউজারের তথ্য
+
+    if (!loggedInUserCreds || !loggedInUserCreds.email) {
+        console.error('Logged in user credentials not found.');
+        return;
+    }
+
+    // Replace '.' in email to avoid Firebase key issues
+    const loggedInUserEmail = loggedInUserCreds.email.replace('.', ',');
+    
+    // Reference to the user's profile details in the database
+    const userProfileRef = dbRef(database, 'User_Profile_details/' + loggedInUserEmail);
+
+    try {
+        // Fetching the logged-in user's profile details
+        const userProfileSnapshot = await get(userProfileRef);
+        if (!userProfileSnapshot.exists()) {
+            console.error('User profile not found.');
+            return;
+        }
+
+        const userProfileData = userProfileSnapshot.val();
+        const profileNodeKey = Object.keys(userProfileData)[0]; // "Brothers Unlimited" as key
+        const profileDetails = userProfileData[profileNodeKey];
+
+        const profileImage = profileDetails.profileImageURL || ''; // Get the profile image URL if available
+        const userName = profileDetails.name || 'Unknown'; // Get the username
+
+        // Reference to the "Friend Requests" node in the database
+        const friendRequestRef = dbRef(database, 'Friend_Requests/' + loggedInUserEmail);
+
+        // Storing friend request info in the database under Friend_Requests node
+        await set(friendRequestRef, {
+            requestFrom: loggedInUserEmail,
+            requestFromName: userName,
+            requestFromProfileImage: profileImage, // Store the profile image URL
+            requestSentOn: new Date().toISOString(),
+            status: 'pending' // Initial status of the request
+        });
+
+        alert('Friend request sent successfully!');
+    } catch (error) {
+        console.error('Error sending friend request:', error);
+    }
+});
+  
+  
+</script>
+  
+  
+  
+  
+  <script>
+    let UserCreds = JSON.parse(localStorage.getItem("user-creds"));
+    let UserInfo = JSON.parse(localStorage.getItem("user-info"));
+
+    let MsgHead = document.getElementById('accountEmail');
+    let GreetHeads = document.querySelectorAll('.greet'); // Select all elements with class 'greet'
+    let LogOutBtns = document.querySelectorAll('.logout-btn');
+    let PostTextarea = document.getElementById('postTextarea');
+    let textareaPlaceholder = document.getElementById('textareaPlaceholder');
+    let nameInput = document.getElementById('editName');
+
+    let logOut = () => {
+        localStorage.removeItem("user-creds");
+        localStorage.removeItem("user-info");
+        window.location.href = 'index.html';
+    }
+
+    let CheckCred = () => {
+        if (!localStorage.getItem("user-creds")) {
+            window.location.href = 'index.html';
+        } else {
+            MsgHead.innerText = `${UserCreds.email}`;
+            GreetHeads.forEach(element => {
+                element.innerText = `${UserInfo.firstName} ${UserInfo.lastName}`;
+            });
+            // Set the placeholder text with user's first name
+            PostTextarea.innerText = `What do you think, ${UserInfo.firstName}?`;
+            textareaPlaceholder.placeholder = `What do you think, ${UserInfo.firstName}?`
+            nameInput.value = `${UserInfo.firstName} ${UserInfo.lastName}`;
+        }
+    }
+
+    window.addEventListener('load', CheckCred);
+
+    // Add event listener to all logout buttons
+    LogOutBtns.forEach(btn => {
+        btn.addEventListener('click', logOut);
+    });
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
