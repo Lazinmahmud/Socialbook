@@ -62,7 +62,7 @@ body{
 }
 .mobail-nav{
   width: 100%;
-  border-bottom: 1px solid #cccc;
+  border-bottom: 1px solid var(--post-border-color);
   background: var(--post-bg-color);
   position: fixed ;
   top: -1px;
@@ -92,13 +92,16 @@ body{
   gap: 1.4rem;
 }
 .search-and-udow-box img{
-  width: 1.8rem;
+  width: 2.2rem;
+  background: var(--off-white-color);
+  padding: 5px;
+  border-radius: 50%;
 }
 .search-and-udow-box img:active{
   opacity: 0.60;
 }
 .navLogo img{
-  width: 140px;
+  width: 130px;
 }
 .nav-bottom{
   width: 100%;
@@ -116,6 +119,9 @@ body{
   align-items: center ;
   justify-content: center;
 }
+.nav-mobail:active{
+  background: var(--off-white-color);
+}
 .nav-bottom a{
   width: 100%;
   height: 100%;
@@ -125,7 +131,7 @@ body{
   cursor: default;
 }
 .nav-mobail img{
-  width: 1.6rem;
+  width: 1.5rem;
   display: none;
 }
 #homeGrayM{
@@ -1499,6 +1505,7 @@ nav {
 }
 .menu-page h4{
   font-size: 25px;
+  color: var(--text-color);
 }
 .menu-profile-cird{
   margin-top: 1rem;
@@ -1525,6 +1532,9 @@ nav {
 }
 .menu-profile-name{
   margin-left: 0.8rem;
+}
+.menu-profile-name h4{
+  color: var(--text-color);
 }
 .lg-btn-menu{
   width: 100%;
@@ -2158,7 +2168,8 @@ nav{
   border-bottom: 8px solid #cccc;
 }
 .textarea p{
-  font-size: 13px;
+  font-size: 15px;
+  color: var(--text-color);
 }
 .nav-img img {
   width: 2.2rem;
@@ -2420,5 +2431,11 @@ nav{
 }
 .reaction-box h4{
   font-size: 16px;
+}
+.post-create-activity-box{
+  display: none;
+}
+.post-create-container hr{
+  display: none;
 }
 }
