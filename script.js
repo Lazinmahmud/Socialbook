@@ -210,152 +210,140 @@ let chatBlueM = document.getElementById('chatBlueM');
 
 
 // Create an audio object
-const tapSound = new Audio('tap.mp3');
+// const tapSound = new Audio('tap.mp3');
 
-let isHomNavMSelected = true; // ফ্ল্যাগ শুরুতে true
 
-// Home Navigation click
-homNavM.addEventListener('click', function() {
-  tapSound.play(); // Play tap sound
 
-  if (isHomNavMSelected) {
-    // যদি homNavM সিলেক্ট থাকে
-    document.querySelector('.main-container').scrollTop = 0; // স্ক্রোল টপে নিয়ে যাওয়া
-    setTimeout(function() {
-   //   window.location.reload(); // পেজ রিফ্রেশ
-    }, 0);
-  } else {
-    // যদি homNavM সিলেক্ট না থাকে
+document.addEventListener('DOMContentLoaded', function() {
+  // Home Navigation click
+  homNavM.addEventListener('click', function() {
+ //   tapSound.play(); // Play tap sound
+
     // Toggle icons
-    homeGrayM.style.display = 'none';
-    homeBlueM.style.display = 'block';
-    profileBlueM.style.display = 'none';
-    profileGrayM.style.display = 'block';
-    notiGrayM.style.display = 'block';
-    notiBlueM.style.display = 'none';
-    chatBlueM.style.display = 'none';
-    chatGrayM.style.display = 'block';
+    if (homeGrayM) homeGrayM.style.display = 'none';
+    if (homeBlueM) homeBlueM.style.display = 'block';
+    if (profileBlueM) profileBlueM.style.display = 'none';
+    if (profileGrayM) profileGrayM.style.display = 'block';
+    if (notiGrayM) notiGrayM.style.display = 'block';
+    if (notiBlueM) notiBlueM.style.display = 'none';
+    if (chatBlueM) chatBlueM.style.display = 'none';
+    if (chatGrayM) chatGrayM.style.display = 'block';
 
     // Change border style
-    navMenuImg.style.border = '2px solid #808080';
+    if (navMenuImg) navMenuImg.style.border = '2px solid #808080';
 
     // Display and hide containers
-    document.querySelector('.profile-page-container').style.display = 'none';
-    document.querySelector('.main-container').style.display = 'flex';
-    document.querySelector('.mobail-nav').style.marginTop = '0';
-    document.querySelector('.menu-page-container').style.display = 'none';
-    document.querySelector('.udow-app-page').style.display = 'none';
-    // Adjust margin
-    document.querySelector('.mUnderline').style.marginLeft = '0%';
+    const profilePageContainer = document.querySelector('.profile-page-container');
+    const mainContainer = document.querySelector('.main-container');
+    const mobileNav = document.querySelector('.mobail-nav');
+    const menuPageContainer = document.querySelector('.menu-page-container');
+    const udowAppPage = document.querySelector('.udow-app-page');
+  //  const mUnderline = document.querySelector('.mUnderline');
+    const friendRequestPage = document.querySelector('.friend-request-page');
 
-    document.querySelector('.friend-request-page').style.display = 'none';
-    // Add overflow-y: scroll to make the element scrollable
-    document.querySelector('.main-container').style.overflowY = 'scroll';
+    if (profilePageContainer) profilePageContainer.style.display = 'none';
+    if (mainContainer) {
+      mainContainer.style.display = 'flex';
+      mainContainer.style.overflowY = 'scroll';
+      mainContainer.scrollTop = 0;
+    }
+    if (mobileNav) mobileNav.style.marginTop = '0';
+    if (menuPageContainer) menuPageContainer.style.display = 'none';
+    if (udowAppPage) udowAppPage.style.display = 'none';
+ //   if (mUnderline) mUnderline.style.marginLeft = '0%';
+    if (friendRequestPage) friendRequestPage.style.display = 'none';
+  });
 
-    // Scroll to the top of the container
-    document.querySelector('.main-container').scrollTop = 0;
+  // Profile Navigation click
+  profileNavM.addEventListener('click', function() {
+ //   tapSound.play(); // Play tap sound
+    if (profileGrayM) profileGrayM.style.display = 'none';
+    if (profileBlueM) profileBlueM.style.display = 'block';
+    if (homeBlueM) homeBlueM.style.display = 'none';
+    if (homeGrayM) homeGrayM.style.display = 'block';
+    if (notiGrayM) notiGrayM.style.display = 'block';
+    if (notiBlueM) notiBlueM.style.display = 'none';
+    if (chatBlueM) chatBlueM.style.display = 'none';
+    if (chatGrayM) chatGrayM.style.display = 'block';
+    if (navMenuImg) navMenuImg.style.border = '2px solid #808080';
 
-    // Update isHomNavMSelected flag
-    isHomNavMSelected = true;
-  }
+    if (document.querySelector('.main-container')) document.querySelector('.main-container').style.display = 'none';
+    if (document.querySelector('.mobail-nav')) document.querySelector('.mobail-nav').style.marginTop = '-3rem';
+    if (document.querySelector('.menu-page-container')) document.querySelector('.menu-page-container').style.display = 'none';
+ //   if (document.querySelector('.mUnderline')) document.querySelector('.mUnderline').style.marginLeft = '20%';
+    if (document.querySelector('.udow-app-page')) document.querySelector('.udow-app-page').style.display = 'none';
+    if (document.querySelector('.friend-request-page')) document.querySelector('.friend-request-page').style.display = 'block';
+  });
+
+  // Udow Navigation click
+  udowNavM.addEventListener('click', function() {
+  //  tapSound.play(); // Play tap sound
+   // if (document.querySelector('.mUnderline')) document.querySelector('.mUnderline').style.marginLeft = '40%';
+    if (chatBlueM) chatBlueM.style.display = 'block';
+    if (chatGrayM) chatGrayM.style.display = 'none';
+    if (homeBlueM) homeBlueM.style.display = 'none';
+    if (homeGrayM) homeGrayM.style.display = 'block';
+    if (profileBlueM) profileBlueM.style.display = 'none';
+    if (profileGrayM) profileGrayM.style.display = 'block';
+    if (notiGrayM) notiGrayM.style.display = 'block';
+    if (notiBlueM) notiBlueM.style.display = 'none';
+    if (navMenuImg) navMenuImg.style.border = '2px solid #808080';
+
+    if (document.querySelector('.mobail-nav')) document.querySelector('.mobail-nav').style.marginTop = '-3rem';
+    if (document.querySelector('.main-container')) document.querySelector('.main-container').style.display = 'none';
+    if (document.querySelector('.profile-page-container')) document.querySelector('.profile-page-container').style.display = 'none';
+    if (document.querySelector('.menu-page-container')) document.querySelector('.menu-page-container').style.display = 'none';
+    if (document.querySelector('.udow-app-page')) document.querySelector('.udow-app-page').style.display = 'block';
+    if (document.querySelector('.friend-request-page')) document.querySelector('.friend-request-page').style.display = 'none';
+  });
+
+  // Notification Navigation click
+  notiNavM.addEventListener('click', function() {
+ //   tapSound.play(); // Play tap sound
+    if (homeBlueM) homeBlueM.style.display = 'none';
+    if (homeGrayM) homeGrayM.style.display = 'block';
+    if (profileBlueM) profileBlueM.style.display = 'none';
+    if (profileGrayM) profileGrayM.style.display = 'block';
+    if (notiGrayM) notiGrayM.style.display = 'none';
+    if (notiBlueM) notiBlueM.style.display = 'block';
+    if (chatBlueM) chatBlueM.style.display = 'none';
+    if (chatGrayM) chatGrayM.style.display = 'block';
+    if (navMenuImg) navMenuImg.style.border = '2px solid #808080';
+
+    if (document.querySelector('.profile-page-container')) document.querySelector('.profile-page-container').style.display = 'none';
+    if (document.querySelector('.main-container')) {
+      document.querySelector('.main-container').style.display = 'flex';
+      document.querySelector('.main-container').scrollTop = 0;
+    }
+    if (document.querySelector('.mobail-nav')) document.querySelector('.mobail-nav').style.marginTop = '-3rem';
+    if (document.querySelector('.menu-page-container')) document.querySelector('.menu-page-container').style.display = 'none';
+  //  if (document.querySelector('.mUnderline')) document.querySelector('.mUnderline').style.marginLeft = '60%';
+    if (document.querySelector('.udow-app-page')) document.querySelector('.udow-app-page').style.display = 'none';
+    if (document.querySelector('.friend-request-page')) document.querySelector('.friend-request-page').style.display = 'none';
+  });
+
+  // Menu Navigation click
+  menuNavM.addEventListener('click', function() {
+  //  tapSound.play(); // Play tap sound
+    if (homeBlueM) homeBlueM.style.display = 'none';
+    if (homeGrayM) homeGrayM.style.display = 'block';
+    if (profileBlueM) profileBlueM.style.display = 'none';
+    if (profileGrayM) profileGrayM.style.display = 'block';
+    if (notiGrayM) notiGrayM.style.display = 'block';
+    if (notiBlueM) notiBlueM.style.display = 'none';
+    if (chatBlueM) chatBlueM.style.display = 'none';
+    if (chatGrayM) chatGrayM.style.display = 'block';
+    if (navMenuImg) navMenuImg.style.border = '2px solid var(--main-color)';
+
+    if (document.querySelector('.menu-page-container')) document.querySelector('.menu-page-container').style.display = 'block';
+    if (document.querySelector('.main-container')) document.querySelector('.main-container').style.display = 'none';
+  //  if (document.querySelector('.mUnderline')) document.querySelector('.mUnderline').style.marginLeft = '80%';
+    if (document.querySelector('.udow-app-page')) document.querySelector('.udow-app-page').style.display = 'none';
+    if (document.querySelector('.mobail-nav')) document.querySelector('.mobail-nav').style.marginTop = '-3rem';
+    if (document.querySelector('.profile-page-container')) document.querySelector('.profile-page-container').style.display = 'none';
+    if (document.querySelector('.friend-request-page')) document.querySelector('.friend-request-page').style.display = 'none';
+  });
 });
-
-// Update isHomNavMSelected flag when other navigation items are clicked
-profileNavM.addEventListener('click', function() {
-  tapSound.play(); // Play tap sound
-  profileGrayM.style.display = 'none';
-  profileBlueM.style.display = 'block';
-  homeBlueM.style.display = 'none';
-  homeGrayM.style.display = 'block';
-  notiGrayM.style.display = 'block';
-  notiBlueM.style.display = 'none';
-  chatBlueM.style.display = 'none';
-    chatGrayM.style.display = 'block';
-  navMenuImg.style.border = '2px solid #808080';
-  
-  
-  document.querySelector('.main-container').style.display = 'none';
-  document.querySelector('.mobail-nav').style.marginTop = '-3rem';
-  document.querySelector('.menu-page-container').style.display = 'none';
-  document.querySelector('.mUnderline').style.marginLeft = '20%';
-  document.querySelector('.udow-app-page').style.display = 'none';
-  document.querySelector('.friend-request-page').style.display = 'block';
-  // Update isHomNavMSelected flag
-  isHomNavMSelected = false;
-});
-
-
-
-udowNavM.addEventListener('click', function(){
-  tapSound.play(); // Play tap sound 
-  document.querySelector('.mUnderline').style.marginLeft = '40%';
-    chatBlueM.style.display = 'block';
-    chatGrayM.style.display = 'none';
-    homeBlueM.style.display = 'none';
-  homeGrayM.style.display = 'block';
-  profileBlueM.style.display = 'none';
-  profileGrayM.style.display = 'block';
-  notiGrayM.style.display = 'block';
-  notiBlueM.style.display = 'none';
-  navMenuImg.style.border = '2px solid #808080';
-  document.querySelector('.mobail-nav').style.marginTop = '-3rem';
-  document.querySelector('.main-container').style.display = 'none';
-  document.querySelector('.profile-page-container').style.display = 'none';
-  document.querySelector('.menu-page-container').style.display = 'none';
-  document.querySelector('.udow-app-page').style.display = 'block';
-  document.querySelector('.friend-request-page').style.display = 'none';
-  isHomNavMSelected = false;
-});
-
-
-
-
-notiNavM.addEventListener('click', function() {
-  tapSound.play(); // Play tap sound
-  homeBlueM.style.display = 'none';
-  homeGrayM.style.display = 'block';
-  profileBlueM.style.display = 'none';
-  profileGrayM.style.display = 'block';
-  notiGrayM.style.display = 'none';
-  notiBlueM.style.display = 'block';
-  chatBlueM.style.display = 'none';
-    chatGrayM.style.display = 'block';
-  navMenuImg.style.border = '2px solid #808080';
-  
-  document.querySelector('.profile-page-container').style.display = 'none';
-  document.querySelector('.main-container').style.display = 'flex';
-  document.querySelector('.mobail-nav').style.marginTop = '-3rem';
-  document.querySelector('.menu-page-container').style.display = 'none';
-  document.querySelector('.mUnderline').style.marginLeft = '60%';
-  document.querySelector('.udow-app-page').style.display = 'none';
-  document.querySelector('.friend-request-page').style.display = 'none';
-  // Update isHomNavMSelected flag
-  isHomNavMSelected = false;
-});
-
-menuNavM.addEventListener('click', function() {
-  tapSound.play(); // Play tap sound
-  homeBlueM.style.display = 'none';
-  homeGrayM.style.display = 'block';
-  profileBlueM.style.display = 'none';
-  profileGrayM.style.display = 'block';
-  notiGrayM.style.display = 'block';
-  notiBlueM.style.display = 'none';
-  chatBlueM.style.display = 'none';
-    chatGrayM.style.display = 'block';
-  navMenuImg.style.border = '2px solid var(--main-color)';
-  document.querySelector('.menu-page-container').style.display = 'block';
-  document.querySelector('.main-container').style.display = 'none';
-  document.querySelector('.mUnderline').style.marginLeft = '80%';
-  document.querySelector('.udow-app-page').style.display = 'none';
-  document.querySelector('.mobail-nav').style.marginTop = '-3rem';
-  document.querySelector('.profile-page-container').style.display = 'none';
-  document.querySelector('.friend-request-page').style.display = 'none';
-  
-  // Update isHomNavMSelected flag
-  isHomNavMSelected = false;
-});
-
 
 
 //lg popup open 
@@ -439,7 +427,7 @@ let postCreateProfile = document.querySelector('.post-create-profile');
 
 postCreateProfile.addEventListener('click', function() {
   
-  tapSound.play();
+//  tapSound.play();
   
   document.querySelector('.profile-page-container').style.display = 'block';
   document.querySelector('.main-container').style.display = 'none';
@@ -456,93 +444,107 @@ postCreateProfile.addEventListener('click', function() {
 
 // dark theame 
 const radioButtons = document.querySelectorAll('input[name="dark-mode"]');
-  const themeMetaTag = document.querySelector('meta[name="theme-color"]');
+const themeMetaTag = document.querySelector('meta[name="theme-color"]');
 
-  // Function to apply the system theme
-  function applySystemTheme() {
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDarkScheme) {
+// Function to apply the system theme
+function applySystemTheme() {
+  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (prefersDarkScheme) {
+    document.body.classList.add('dark-theme');
+    themeMetaTag.setAttribute('content', '#242527');
+    updateIconsForDarkMode(true);
+  } else {
+    document.body.classList.remove('dark-theme');
+    themeMetaTag.setAttribute('content', '#ffffff');
+    updateIconsForDarkMode(false);
+  }
+}
+
+// Function to update icon src based on theme
+function updateIconsForDarkMode(isDarkMode) {
+  if (isDarkMode) {
+    document.getElementById('homeGray').src = 'home-lite.png';
+    document.getElementById('profileGray').src = 'profile-lite.png';
+    document.getElementById('notiGray').src = 'video-lite.png';
+    document.getElementById('notiLight').src = 'notifi-lite.png';
+    document.getElementById('homeGrayM').src = 'home-lite.png'; // Update homeGrayM for dark mode 
+    document.getElementById('profileGrayM').src = 'friends-lite.png';
+    document.getElementById('chatGrayM').src = 'profile-lite.png';
+    document.getElementById('notiGrayM').src = 'noti-lite.png';
+    document.getElementById('appLogo').src = 'logo-lite.png';
+    document.getElementById('searchImgIcon').src = 'search-lite.png';
+    document.getElementById('udowImg').src = 'udow-lite.png';
+  } else {
+    document.getElementById('homeGray').src = 'home.png';
+    document.getElementById('profileGray').src = 'profile.png';
+    document.getElementById('notiGray').src = 'video.png';
+    document.getElementById('notiLight').src = 'noti-dark.png';
+    document.getElementById('homeGrayM').src = 'home.png';
+    document.getElementById('profileGrayM').src = 'friends.png';
+    document.getElementById('chatGrayM').src = 'profile.png';
+    document.getElementById('notiGrayM').src = 'notification.png';
+    document.getElementById('appLogo').src = 'logo-blue.png';
+    document.getElementById('searchImgIcon').src = 'search.png';
+    document.getElementById('udowImg').src = 'udow.png';
+  }
+}
+
+// Apply the theme based on local storage or system preference
+function applySavedTheme() {
+  const savedTheme = localStorage.getItem('dark-mode');
+
+  if (savedTheme === 'on') {
+    document.querySelector('input[value="on"]').checked = true;
+    document.body.classList.add('dark-theme');
+    themeMetaTag.setAttribute('content', '#242527');
+    updateIconsForDarkMode(true);
+  } else if (savedTheme === 'off') {
+    document.querySelector('input[value="off"]').checked = true;
+    document.body.classList.remove('dark-theme');
+    themeMetaTag.setAttribute('content', '#ffffff');
+    updateIconsForDarkMode(false);
+  } else if (savedTheme === 'dim') {
+    document.querySelector('input[value="dim"]').checked = true;
+    document.body.classList.add('dark-dim');
+    themeMetaTag.setAttribute('content', '#253442'); // Dim color
+    updateIconsForDarkMode(true);
+  } else if (savedTheme === 'auto') {
+    document.querySelector('input[value="auto"]').checked = true;
+    applySystemTheme();
+  }
+}
+
+// Event listener for radio button changes
+radioButtons.forEach(radio => {
+  radio.addEventListener('change', function() {
+    localStorage.setItem('dark-mode', this.value); // Save theme to local storage
+
+    if (this.value === 'on') {
+      document.body.classList.remove('dark-dim');
       document.body.classList.add('dark-theme');
       themeMetaTag.setAttribute('content', '#242527');
       updateIconsForDarkMode(true);
-    } else {
+    } else if (this.value === 'off') {
       document.body.classList.remove('dark-theme');
+      document.body.classList.remove('dark-dim');
       themeMetaTag.setAttribute('content', '#ffffff');
       updateIconsForDarkMode(false);
-    }
-  }
-
-  // Function to update icon src based on theme
-  function updateIconsForDarkMode(isDarkMode) {
-    if (isDarkMode) {
-      document.getElementById('homeGray').src = 'home-lite.png';
-      document.getElementById('profileGray').src = 'profile-lite.png';
-      document.getElementById('notiGray').src = 'video-lite.png';
-      document.getElementById('notiLight').src = 'notifi-lite.png';
-    } else {
-      document.getElementById('homeGray').src = 'home.png';
-      document.getElementById('profileGray').src = 'profile.png';
-      document.getElementById('notiGray').src = 'video.png';
-      document.getElementById('notiLight').src = 'noti-dark.png';
-    }
-  }
-
-  // Apply the theme based on local storage or system preference
-  function applySavedTheme() {
-    const savedTheme = localStorage.getItem('dark-mode');
-
-    if (savedTheme === 'on') {
-      document.querySelector('input[value="on"]').checked = true;
-      document.body.classList.add('dark-theme');
-      themeMetaTag.setAttribute('content', '#242527');
-      updateIconsForDarkMode(true);
-    } else if (savedTheme === 'off') {
-      document.querySelector('input[value="off"]').checked = true;
+    } else if (this.value === 'dim') {
       document.body.classList.remove('dark-theme');
-      themeMetaTag.setAttribute('content', '#ffffff');
-      updateIconsForDarkMode(false);
-    } else if (savedTheme === 'dim') {
-      document.querySelector('input[value="dim"]').checked = true;
       document.body.classList.add('dark-dim');
       themeMetaTag.setAttribute('content', '#253442'); // Dim color
       updateIconsForDarkMode(true);
-    } else if (savedTheme === 'auto') {
-      document.querySelector('input[value="auto"]').checked = true;
+    } else if (this.value === 'auto') {
       applySystemTheme();
     }
-  }
-
-  // Event listener for radio button changes
-  radioButtons.forEach(radio => {
-    radio.addEventListener('change', function() {
-      localStorage.setItem('dark-mode', this.value); // Save theme to local storage
-
-      if (this.value === 'on') {
-        document.body.classList.remove('dark-dim');
-        document.body.classList.add('dark-theme');
-        themeMetaTag.setAttribute('content', '#242527');
-        updateIconsForDarkMode(true);
-      } else if (this.value === 'off') {
-        document.body.classList.remove('dark-theme');
-        document.body.classList.remove('dark-dim');
-        themeMetaTag.setAttribute('content', '#ffffff');
-        updateIconsForDarkMode(false);
-      } else if (this.value === 'dim') {
-        document.body.classList.remove('dark-theme');
-        document.body.classList.add('dark-dim');
-        themeMetaTag.setAttribute('content', '#253442'); // Dim color
-        updateIconsForDarkMode(true);
-      } else if (this.value === 'auto') {
-        applySystemTheme();
-      }
-    });
   });
+});
 
-  // Listen for system theme changes and apply them dynamically
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applySystemTheme);
+// Listen for system theme changes and apply them dynamically
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applySystemTheme);
 
-  // Apply saved theme on page load
-  applySavedTheme();
+// Apply saved theme on page load
+applySavedTheme();
   
   
 
