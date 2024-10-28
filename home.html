@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#fff">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="home.css">
+  <link rel="icon" href="logo-circle.png" type="image/png">
   <title>home</title>
 </head>
 <body >
@@ -1383,6 +1384,7 @@ const updateLikeDisplay = (postId) => {
     const likeBlue = document.getElementById(`likeBlue-${postId}`);
     const likeContentBox = document.querySelector(`#post-${postId} .like-content`);
     const seeReactionPageOpacity = document.querySelector('.see-reaction-page-opachity');
+    const reactionPage = document.querySelector(".see-reaction-page");
     let reactionList = document.getElementById(`reaction-list-${postId}`);
 
     // If reactionList is missing, create it dynamically
@@ -1478,13 +1480,15 @@ const updateLikeDisplay = (postId) => {
                         reactionPage.appendChild(reactionList); // Append the reaction list to the new structure
                         seeReactionPageOpacity.appendChild(reactionPage); // Append the reaction page to opacity
 
-                        seeReactionPageOpacity.style.display = 'flex'; // Show the opacity div
-                        
-
+                        seeReactionPageOpacity.style.top = '0'; // Show the opacity div
+                        reactionPage.style.bottom = '0';
+                        reactionPage.style.display = 'block';
                         // Add event listener for closing the reaction page
                         const closeButton = document.getElementById('close-reaction-page');
                         closeButton.addEventListener('click', () => {
-                            seeReactionPageOpacity.style.display = 'none'; // Hide the reaction page
+                            seeReactionPageOpacity.style.top = '100%'; // Hide the reaction page 
+                        reactionPage.style.bottom = '-100%';
+                        reactionPage.style.display = 'none';
                         });
                     });
                 }
