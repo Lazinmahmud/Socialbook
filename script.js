@@ -209,10 +209,6 @@ let chatBlueM = document.getElementById('chatBlueM');
 
 
 
-// Create an audio object
-// const tapSound = new Audio('tap.mp3');
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
   // Home Navigation click
@@ -233,25 +229,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (navMenuImg) navMenuImg.style.border = '2px solid #808080';
 
     // Display and hide containers
-    const profilePageContainer = document.querySelector('.profile-page-container');
-    const mainContainer = document.querySelector('.main-container');
     const mobileNav = document.querySelector('.mobail-nav');
     const menuPageContainer = document.querySelector('.menu-page-container');
-    const udowAppPage = document.querySelector('.udow-app-page');
   //  const mUnderline = document.querySelector('.mUnderline');
     const friendRequestPage = document.querySelector('.friend-request-page');
-
-    if (profilePageContainer) profilePageContainer.style.display = 'none';
-    if (mainContainer) {
-      mainContainer.style.display = 'flex';
-      mainContainer.style.overflowY = 'scroll';
-      mainContainer.scrollTop = 0;
-    }
+    
     if (mobileNav) mobileNav.style.marginTop = '0';
     if (menuPageContainer) menuPageContainer.style.display = 'none';
-    if (udowAppPage) udowAppPage.style.display = 'none';
- //   if (mUnderline) mUnderline.style.marginLeft = '0%';
     if (friendRequestPage) friendRequestPage.style.display = 'none';
+    if (document.querySelector('.main-content')) document.querySelector('.main-content').style.display = 'block';
   });
 
   // Profile Navigation click
@@ -270,15 +256,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.main-container')) document.querySelector('.main-container').style.display = 'none';
     if (document.querySelector('.mobail-nav')) document.querySelector('.mobail-nav').style.marginTop = '-3rem';
     if (document.querySelector('.menu-page-container')) document.querySelector('.menu-page-container').style.display = 'none';
- //   if (document.querySelector('.mUnderline')) document.querySelector('.mUnderline').style.marginLeft = '20%';
-    if (document.querySelector('.udow-app-page')) document.querySelector('.udow-app-page').style.display = 'none';
     if (document.querySelector('.friend-request-page')) document.querySelector('.friend-request-page').style.display = 'block';
   });
 
   // Udow Navigation click
   udowNavM.addEventListener('click', function() {
-  //  tapSound.play(); // Play tap sound
-   // if (document.querySelector('.mUnderline')) document.querySelector('.mUnderline').style.marginLeft = '40%';
+
     if (chatBlueM) chatBlueM.style.display = 'block';
     if (chatGrayM) chatGrayM.style.display = 'none';
     if (homeBlueM) homeBlueM.style.display = 'none';
@@ -290,11 +273,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (navMenuImg) navMenuImg.style.border = '2px solid #808080';
 
     if (document.querySelector('.mobail-nav')) document.querySelector('.mobail-nav').style.marginTop = '-3rem';
-    if (document.querySelector('.main-container')) document.querySelector('.main-container').style.display = 'none';
-    if (document.querySelector('.profile-page-container')) document.querySelector('.profile-page-container').style.display = 'none';
+    
     if (document.querySelector('.menu-page-container')) document.querySelector('.menu-page-container').style.display = 'none';
-    if (document.querySelector('.udow-app-page')) document.querySelector('.udow-app-page').style.display = 'block';
+    if (document.querySelector('.profile-page-container')) document.querySelector('.profile-page-container').style.display = 'block';
+    if (document.querySelector('.profile-page-container')) document.querySelector('.profile-page-container').style.marginTop= '-3rem';
     if (document.querySelector('.friend-request-page')) document.querySelector('.friend-request-page').style.display = 'none';
+    if (document.querySelector('.main-content')) document.querySelector('.main-content').style.display = 'none';
   });
 
   // Notification Navigation click
@@ -310,15 +294,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (chatGrayM) chatGrayM.style.display = 'block';
     if (navMenuImg) navMenuImg.style.border = '2px solid #808080';
 
-    if (document.querySelector('.profile-page-container')) document.querySelector('.profile-page-container').style.display = 'none';
-    if (document.querySelector('.main-container')) {
-      document.querySelector('.main-container').style.display = 'flex';
-      document.querySelector('.main-container').scrollTop = 0;
-    }
+    
+    
     if (document.querySelector('.mobail-nav')) document.querySelector('.mobail-nav').style.marginTop = '-3rem';
     if (document.querySelector('.menu-page-container')) document.querySelector('.menu-page-container').style.display = 'none';
-  //  if (document.querySelector('.mUnderline')) document.querySelector('.mUnderline').style.marginLeft = '60%';
-    if (document.querySelector('.udow-app-page')) document.querySelector('.udow-app-page').style.display = 'none';
+
+    
     if (document.querySelector('.friend-request-page')) document.querySelector('.friend-request-page').style.display = 'none';
   });
 
@@ -337,8 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (document.querySelector('.menu-page-container')) document.querySelector('.menu-page-container').style.display = 'block';
     if (document.querySelector('.main-container')) document.querySelector('.main-container').style.display = 'none';
-  //  if (document.querySelector('.mUnderline')) document.querySelector('.mUnderline').style.marginLeft = '80%';
-    if (document.querySelector('.udow-app-page')) document.querySelector('.udow-app-page').style.display = 'none';
+
     if (document.querySelector('.mobail-nav')) document.querySelector('.mobail-nav').style.marginTop = '-3rem';
     if (document.querySelector('.profile-page-container')) document.querySelector('.profile-page-container').style.display = 'none';
     if (document.querySelector('.friend-request-page')) document.querySelector('.friend-request-page').style.display = 'none';
@@ -420,26 +400,7 @@ const likeBox = document.getElementById('likeBox');
   })
 */
   
-  
-// profile page open mobail screen 
-
-let postCreateProfile = document.querySelector('.post-create-profile');
-
-postCreateProfile.addEventListener('click', function() {
-  
-//  tapSound.play();
-  
-  document.querySelector('.profile-page-container').style.display = 'block';
-  document.querySelector('.main-container').style.display = 'none';
-  
-  homeGray.style.display = 'block';
-  homeBlue.style.display = 'none';
-  profileBlue.style.display = 'block';
-  profileGray.style.display = 'none';
-  notiBlue.style.display = 'none';
-  notiGray.style.display = 'block';
-  underline.style.marginLeft = '33%'
-});
+ 
 
 
 // dark theame 
