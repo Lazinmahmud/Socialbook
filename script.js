@@ -213,7 +213,7 @@ let chatBlueM = document.getElementById('chatBlueM');
 document.addEventListener('DOMContentLoaded', function() {
   // Home Navigation click
   homNavM.addEventListener('click', function() {
- //   tapSound.play(); // Play tap sound
+
 
     // Toggle icons
     if (homeGrayM) homeGrayM.style.display = 'none';
@@ -238,6 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (menuPageContainer) menuPageContainer.style.display = 'none';
     if (friendRequestPage) friendRequestPage.style.display = 'none';
     if (document.querySelector('.main-content')) document.querySelector('.main-content').style.display = 'block';
+    if (document.querySelector('.profile-page-container')) document.querySelector('.profile-page-container').style.display = 'none';
   });
 
   // Profile Navigation click
