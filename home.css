@@ -438,6 +438,7 @@ nav {
   width: 100%;
   margin-top: 5rem;
   display: flex;
+  
 }
 .left-sidebar{
   top: 65px;
@@ -1077,8 +1078,6 @@ nav {
 .profile-page{
   width: 100%;
   height: 100vh;
-  
-  overflow-y: scroll;
 }
 .profile-into-container{
   width: 100%;
@@ -1437,7 +1436,14 @@ nav {
 .profile-page-post{
   margin-top: 1rem;
 }
-
+.profile-post{
+  width: 100%;
+  background: var(--post-bg-color);
+  padding-bottom: 0rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
 
 
 
@@ -2110,10 +2116,10 @@ nav{
   border-bottom: 8px solid var(--post-border-color);
 }
 .post-text p{
-  font-size: 15px;
+  font-size: 18px;
 }
 .post-userName-andtime h4{
-  font-size: 14px;
+  font-size: 17px;
 }
 .post-profile{
   width: 45px;
@@ -2129,7 +2135,7 @@ nav{
   padding-left: 7px;
 }
 .span{
-  font-size: 12px;
+  font-size: 14px;
 }
 .post-menu i{
   font-size: 22px;
@@ -2148,7 +2154,6 @@ nav{
 }
 .like-box{
   height: 100%;
-  background: var(--like-btn-color);
   border-radius: 2rem;
 }
 .like-box img{
@@ -2195,6 +2200,7 @@ nav{
 .profile-page-container{
   width: 100%;
   margin-top: 3rem;
+  
 }
 .cover-photo-container{
   height: 200px;
@@ -2405,9 +2411,6 @@ nav{
   width: 100px;
   height: 180px;
 }
-.profile-page{
-  position: fixed;
-}
 .post-create-activity-btn img{
   width: 22px;
 }
@@ -2444,5 +2447,12 @@ nav{
 .like-box:active{
   opacity: 0.60;
   transform: scale(0.92);
+}
+.profile-post{
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  border-bottom: 8px solid var(--post-border-color);
+  
 }
 }
